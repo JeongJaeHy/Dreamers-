@@ -3,7 +3,7 @@
 # image 문을 사용해 이미지를 정의합니다.
 # image eileen happy = "eileen_happy.png"
 init:
-    image c = "group.png"
+    #image c = "group.png"
     image gray = "#B4B4B4"
     image white = "#FFFFFF"
     image red = "#FF0000"

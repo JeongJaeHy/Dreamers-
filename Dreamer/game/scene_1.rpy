@@ -1,6 +1,6 @@
 #전개 파트 -> 검은 방 탈출 후, 얼음성 가기전 J와 만나는 부분.
-init:
-    image gift = "gift.jpg"
+#init:
+    #image gift = "gift.jpg"
 
 label scene_1_start :
     "여긴 어디지?"
