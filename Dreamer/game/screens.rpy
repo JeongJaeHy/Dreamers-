@@ -264,7 +264,7 @@ screen quick_menu():
 init python:
     config.overlay_screens.append("quick_menu")
 
-default quick_menu = True
+default quick_menu = False
 
 style quick_button is default
 style quick_button_text is button_text
@@ -287,11 +287,16 @@ style quick_button_text:
 
 screen navigation():
 
-    vbox:
+    hbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+        if main_menu :
+            xalign 0.5
+            yalign 0.98
+
+        else :
+            xalign 0.5
+            yalign 0.95
 
         spacing gui.navigation_spacing
 
@@ -299,15 +304,22 @@ screen navigation():
 
             textbutton _("시작하기") action Start()
 
+            null width 40
+
+            textbutton _("로드") action ShowMenu("load")
+
+            null width 0
+
         else:
 
-            textbutton _("History") action ShowMenu("history")
+            #textbutton _("History") action ShowMenu("history")
 
             textbutton _("저장하기") action ShowMenu("save")
 
-        textbutton _("로드") action ShowMenu("load")
+            null width 50
 
-        textbutton _("환경 설정") action ShowMenu("preferences")
+
+        #textbutton _("환경 설정") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -317,12 +329,14 @@ screen navigation():
 
             textbutton _("메인 메뉴") action MainMenu()
 
-        textbutton _("렌파이란") action ShowMenu("about")
+            null width 50
+
+        #textbutton _("렌파이란") action ShowMenu("about")
 
         if renpy.variant("pc"):
 
             ## 도움말 메뉴는 모바일 디바이스와 맞지 않아 불필요합니다.
-            textbutton _("도움말") action ShowMenu("help")
+            #textbutton _("도움말") action ShowMenu("help")
 
             ## 종료 버튼은 iOS 규정에 어긋나고 안드로이드에는 불필요합니다.
             textbutton _("끝내기") action Quit(confirm=not main_menu)
@@ -352,7 +366,8 @@ screen main_menu():
 
     style_prefix "main_menu"
 
-    add gui.main_menu_background
+    #add gui.main_menu_background
+    add "images/dreamer.jpg"
 
     ## This empty frame darkens the main menu.
     frame:
@@ -368,8 +383,8 @@ screen main_menu():
             text "[config.name!t]":
                 style "main_menu_title"
 
-            text "[config.version]":
-                style "main_menu_version"
+            #text "[config.version]":
+                #style "main_menu_version"
 
 
 style main_menu_frame is empty
@@ -382,7 +397,7 @@ style main_menu_frame:
     xsize 280
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    #background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
@@ -1498,8 +1513,3 @@ style slider_pref_vbox:
 style slider_pref_slider:
     variant "small"
     xsize 600
-
-
-
-
-

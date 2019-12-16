@@ -1,11 +1,14 @@
 #전개 파트 -> 검은 방 탈출 후, 얼음성 가기전 J와 만나는 부분.
-#init:
-    #image gift = "gift.jpg"
+init:
+    image gift_background = "scene1/gift_background.png"
+    image gift_background_night = "scene1/gift_background_night.png"
+    image snj = "scene1/snj.png"
+
 
 label scene_1_start :
-    "여긴 어디지?"
+    scene gift_background with dissolve
 
-    scene gift
+    "여긴 어디지?"
 
     "선물 박스, 알록달록한 포장지...파스텔톤의 하늘. 도대체 이게 뭐야."
 
@@ -18,7 +21,11 @@ label scene_1_start :
 
     "소리를 듣자 하니 작은 개가 아니라 큰 개다. 점점 가까워진다."
 
+    show k far at center with dissolve
+
     "곧 보인 것은 아주 귀엽게 생긴 개였다."
+
+    show k close at center with dissolve
 
     "강아지" "멍! 멍" (who_color = "#ebe3ce")
 
@@ -33,6 +40,8 @@ label scene_1_start :
     "{i}아, 사람, 사람이다!{/i} 나는 안도감에 울 것만 같았다."
 
     #J 숨을 헐떡이면서(이건 캐릭터 움직임으로 표현해보기)
+    show k close at left
+    show j breathe at right with dissolve
     uj "카슈, 멀리가지 말랬잖아."
 
     #J S를 발견하고(캐릭터 변화)
@@ -41,6 +50,7 @@ label scene_1_start :
     uj "네?"
     "강아지" "멍!" (who_color = "#ebe3ce")
     s "..."
+    show j normal at right with dissolve
     uj "..당신 여기로 처음 나왔죠?"
 
     jump scene_1_1
@@ -81,11 +91,11 @@ label scene_1_1 :
     jump scene_1_2
 
 label scene_1_2:
+    scene gift_background with dissolve
+    show snj at center
     "깨어났을 때는 J가 걱정스럽게 나를 내려다보고 있었다."
 
     "이 곳이 꿈이라는 것을 받아들일 수 있게 된 즈음에 J는 이야기를 시작했다."
-
-    scene gift
 
     j "꿈에서 탈출해야겠다는 결심을 했었어. 점점 내 몸의 자유도가 떨어지고...
     나에게 남은 시간이 얼마 남지 않았다는 걸 알려주는 것 처럼..."
@@ -106,8 +116,7 @@ label scene_1_2:
     s "탈출할 수 있는 방법? 너는 그걸 어떻게 알아?"
 
     #여기 느낌상 컷씬 들어가면 좋을 것 같긴해요..
-    scene gray
-
+    #scene gray
     j "예전에 나는 딱 너처럼 밀실에서 바로 나온 상태였어."
     j "그때 K라는 친구가 있었는데, 그 친구가 말해줬지. K는 예전에 한 번 팀을 꾸려서 그 성에 갔었대."
     j "얼음성엔 네 명 이상이 되었을 때야 갈 수 있어. 그게 얼음성의 규칙이래."
@@ -115,7 +124,6 @@ label scene_1_2:
 
     "과연 이 말은 진실일까..."
 
-    scene gift
 
     s "K라는 사람의 말을 믿을 근거가 없어."
     j "비관적으로 받아들이지 마. 혹여 K의 말이 거짓이라 하더라도, 뭐든지 해 보는게 나아."
@@ -139,6 +147,7 @@ label scene_1_2:
 
 label scene_1_end:
     # 화면 2.1 선물 상자 저녁버전.
+    scene gift_background_night with dissolve
     a "S, 만나서 반가워."
     s "반가워요."
     a "말은 편하게 해. 여긴 꿈이라니까 꿈."
