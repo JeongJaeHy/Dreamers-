@@ -22,6 +22,7 @@ init:
     image j breathe = "Character/j1.png"
     image j normal = "Character/j2.png"
     image j worry = "Character/j3_worry.png"
+    image j non = "Character/nonj.png"
 
 # 게임에서 사용할 캐릭터를 정의합니다.
     define s = Character("S", color = "#303030", image = "s")

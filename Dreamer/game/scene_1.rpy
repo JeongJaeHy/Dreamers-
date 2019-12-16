@@ -73,6 +73,7 @@ label scene_1_1 :
 
     "나는 그만 눈 앞이 아득해진다. 넘어지려 하던 것을 여자가 붙잡았다."
 
+    show j worry at right with dissolve
     uj "정신 차려요. 일단 받아들여야 해요. 이름을 이야기해봐요. 이름은 기억나죠?"
     s "S..."
     uj "제 이름은 J에요."
