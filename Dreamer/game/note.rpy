@@ -1,5 +1,6 @@
 label note1:
     scene white with dissolve
+    scene black
     narr_nvl "얼음성으로 가는 길은 멀고 험했다. \n" (what_color = "#000", what_size = 22)
     narr_nvl "우리는 많은 이야기를 나누었다. \n" (what_color = "#000", what_size = 22)
     narr_nvl "J는 카슈 이야기를 들려주었다. 카슈는 유기견이라고 한다. J는 한겨울에 버려져 추위에 떨고 있던 카슈를 집으로 데리고 왔다. 카슈는 낡은 상자 안에 담겨 있었다고 한다. \n" (what_color = "#000", what_size = 22)
@@ -7,11 +8,12 @@ label note1:
     narr_nvl "A는 J의 이야기를 듣는 내내 묵묵부답이었다. 이미 많이 들은 이야기라 그런 것일까. A는 첫인상 그대로, 과묵하고 자기 이야기를 잘 하지 않았다. 가족이 있었던 기억이 난다고는 이야기했다. 그 이상의 말은 듣지 못했다. \n" (what_color = "#000", what_size = 22)
     narr_nvl "J는 기르던 개가 기억나고, A는 가족이 있던 것이 기억나지만, 정작 나는 나 자신에 대해 아무것도 기억이 나지 않는다.\n" (what_color = "#000", what_size = 22)
     narr_nvl "오직 내가 어렸을 때 돌아가신 부모님 생각이 난다. 부모님과 함께 갔던 레스토랑.. 그 밖에는 깜깜한 암흑이다."(what_color = "#000", what_size = 22)
-    scene black with dissolve
+
     return
 
 label note2: #웨이터 t
     scene white with dissolve
+    scene black
     nvl clear
     narr_nvl "얼음성 웨이터 T는 프랑스의 한 소도시에서 대저택의 집사로 일했다고 했다. \n" (what_color = "#000", what_size = 22)
     narr_nvl "그리고 해고될 때는 주인이 바뀌어 있었다고 했다." (what_color = "#000", what_size = 22)
@@ -28,11 +30,12 @@ label note2: #웨이터 t
     narr_nvl "T의 말을 들으며 나는 프랑스의 어느 아름다운 소도시를 떠올렸다." (what_color = "#000", what_size = 22)
     narr_nvl "그리고 어딘가에 있을 내 몸을 생각했다. \n" (what_color = "#000", what_size = 22)
     narr_nvl "나는 어디에 있을까..." (what_color = "#000", what_size = 22)
-    scene black with dissolve
+
     return
 
 label note3: #J 노트
     scene white with dissolve
+    scene black
     nvl clear
     narr_nvl "J는 떨리는 목소리로 자신의 이야기를 시작했다. \n" (what_color = "#000", what_size = 22)
 
@@ -47,11 +50,12 @@ label note3: #J 노트
 
     narr_nvl "이미 죽은 카슈를 다시 볼 수 있어서, 꿈에 갇혀 있어도 좋았다고 말하며 J는 웃었다." (what_color = "#000", what_size = 22)
     narr_nvl "그럼 이젠 왜 탈출하려고 하는 거냐 묻자 J는 그게 카슈가 원하는 길 같다는 말을 덧붙였다." (what_color = "#000", what_size = 22)
-    scene black with dissolve
+
     return
 
 label note4: #T 노트
     scene white with dissolve
+    scene black
     nvl clear
     narr_nvl "다음 방으로 가는 길에 T는 전에 일했던 저택에 대해 말 해 주었다. \n" (what_color = "#000", what_size = 22)
     narr_nvl "T는 어린 시절 프랑스로 입양되었다고 한다. 성인이 되고서는 저택에서 집사로 근무했다." (what_color = "#000", what_size = 22)
@@ -72,11 +76,12 @@ label note4: #T 노트
 
     narr_nvl "맛있는 음식들과 그 온기들" (what_color = "#000", what_size = 22)
     narr_nvl "저택 방의 접시를 보고 나는 그 장면을 떠올릴 수 있었다." (what_color = "#000", what_size = 22)
-    scene black with dissolve
+
     return
 
 label note5: #s 노트
     scene white with dissolve
+    scene black
     nvl clear
     narr_nvl "새하얗게 먼지 하나 붙어 있지 않은 식탁보, 빛나는 샹들리에" (what_color = "#000", what_size = 22)
     narr_nvl "어머니가 좋아했던 트러플. 큰 접시에 조금씩 담겨 나오던 파스타, 스테이크, 디저트, 이름 모를 외국 음식들, 온기"(what_color = "#000", what_size = 22)
@@ -91,5 +96,5 @@ label note5: #s 노트
     narr_nvl "내 어릴 때 꿈은 맛있는 디저트를 만드는 파티쉐였다. 어머니가 먹여 준 달고 맛있는 디저트들의 맛... 아버지 어머니와의 따뜻한 식사... \n" (what_color = "#000", what_size = 22)
 
     narr_nvl "하지만 그 맛은 이젠 다시는 가 닿을 수 없는 맛이 되었다." (what_color = "#000", what_size = 22)
-    scene black with dissolve
+
     return
