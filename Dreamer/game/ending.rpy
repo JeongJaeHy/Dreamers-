@@ -81,6 +81,7 @@ label end_true_1: #2번 엔딩.
     #화면 1 연습. 어두워지고 밝아짐.
     scene black with dissolve
     scene white with dissolve
+    play music "audio/Ending.mp3" fadeout 1
 
     #눈을 뜨는 J 젊은 사람. 눈을 감고 누워있는 S 노인.
 
@@ -101,6 +102,7 @@ label end_true_2: #3번 엔딩.
     #화면 1. + 병실 소리
     scene black with dissolve
     scene white with dissolve
+    play music "audio/Ending.mp3" fadeout 1
     #화면 6.1 J의 죽음. 눈을 뜨는 늙은 S, 고개를 돌리자 눈을 감고 누워있는 J
 
     s "여긴… 병실인가…?"
@@ -122,6 +124,7 @@ label end_true_3: #4번 엔딩.
     #화면 1. 어두워지고 밝아짐.
     scene black with dissolve
     scene white with dissolve
+    play music "audio/Ending.mp3" fadeout 1
     # 6.1 J의 죽음. 자신과 J의 모습을 인식하는 S
     s "여긴… 병실인가…?"
 

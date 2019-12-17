@@ -1,6 +1,7 @@
 #절정 파트 이야기 => 열쇠 잡는 여정.
 label climax_start_good_a :
     scene white with dissolve
+    play music "audio/Climax.mp3" fadeout 1
 
     "빛이 강하다. 눈을 뜨기가 어려워."
     "열기가 느껴진다. 여긴..."
@@ -650,6 +651,7 @@ label climax_good_not_said:
 
 label climax_start_bad_a :
     scene white with dissolve
+    play music "audio/Climax.mp3" fadeout 1
 
     "빛이 강하다. 눈을 뜨기가 어려워."
     "열기가 느껴진다. 여긴..."

@@ -89,6 +89,7 @@ label start:
 
 label prologue:
     show screen stats_button_screen
+    play music "audio/Prologue.mp3" fadeout 1
 
     scene pro_1
     "나는 밀실에 갇혔다."

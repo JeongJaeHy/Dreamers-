@@ -7,6 +7,7 @@ init:
 
 label scene_1_start :
     scene gift_background with dissolve
+    stop music fadeout 1
 
     "여긴 어디지?"
 

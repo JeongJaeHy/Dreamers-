@@ -1,6 +1,7 @@
 #S의 방. 세 번째 방
 label s_room_start :
     call a_larger_than_j
+    play music "audio/S_room.mp3" fadeout 1
     #scene 1 : 검정 배경에 네 갈래 갈림길
 
     "웨이터 T의 방에서 뻗어나온 검은 복도는 유난히 긴 것만 같다."

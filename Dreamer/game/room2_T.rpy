@@ -1,5 +1,7 @@
 #웨이터 T의 방에서 일어나는 이야기들 & 두 번째 방.
 label t_room_start :
+    play music "audio/T_room.mp3" fadeout 1
+
     "방문을 열었다. 정원의 풍경이 펼쳐졌다."
 
     j "카슈가 없으니까 허전해."
