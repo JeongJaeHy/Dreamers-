@@ -88,6 +88,7 @@ label start:
 
 
 label prologue:
+    show screen stats_button_screen
 
     scene pro_1
     "나는 밀실에 갇혔다."
@@ -217,3 +218,31 @@ label a_larger_than_j:
         $ aj_check = False
 
     return
+
+screen stats_button_screen() :
+    textbutton "스탯" :
+        # action : "스탯"버튼이 눌렸을 때 실행할 행동
+        # if문 해석 : stats_screen이 켜져있으면 Hide하고, 꺼져있으면 Show해라.
+        action If(renpy.get_screen("stats_screen"), Hide("stats_screen"), Show("stats_screen"))
+
+        # 버튼위치, 화면에서 가로방향으로 0.95, 세로방향으로 0.05 비율 되는 곳에 존재
+        align (0.95, 0.05)
+
+# label start에서 호출된 stats_button_screen의 텍스트버튼이 눌리면 호출됨
+
+screen stats_screen() :
+    frame:
+        align(0.05,0.25)
+#        xysize(180, 100)
+        vbox:
+            spacing 3
+            align(1.0, 0.5)
+            text "{u}Stats:{/u}"
+            text "J파라미터: [j_para]"
+            text "A파라미터: [a_para]"
+            text "아이 선택: [c_select]"
+            text "A가 크면 True: [aj_check]"
+            text "카슈 얼리기: [k_check]"
+            text "A가 아이 얘기: [a_talk_c]"
+            text "T방 사다리: [t_check]"
+            text "A방 열쇠: [a_room_check]"

@@ -195,5 +195,4 @@ label scene_1_end:
     s relax "좋아. 함께 가 보자."
 
     call note1
-
     jump scene_2_start
