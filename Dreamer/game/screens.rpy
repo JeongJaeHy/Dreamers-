@@ -1363,7 +1363,7 @@ style nvl_window:
     xfill True
     yfill True
 
-    background "gui/nvl.png"
+    background "gui/note.png"
     padding gui.nvl_borders.padding
 
 style nvl_entry:

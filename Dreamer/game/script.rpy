@@ -14,15 +14,40 @@ init:
     image pro_exit = "prologue/pro_exit.png"
 
     #캐릭터 이미지 정의.
+    #아이
     image ch_1 = "Character/ch_1.png"
     image ch_2 = "Character/ch_2.png"
+
+    #S
     image s surprise = "Character/s_1.png"
+    image s talk = "Character/s_2_talk.png"
+    image s relax = "Character/s_relax.png"
+    image s normal = "Character/s_평범.png"
+    image s non = "Character/s_non.png"
+
+    #카슈
     image k far = "Character/ka_1.png"
     image k close = "Character/ka_2.png"
+
+    #J
     image j breathe = "Character/j1.png"
     image j normal = "Character/j2.png"
     image j worry = "Character/j3_worry.png"
     image j non = "Character/nonj.png"
+
+    #T
+    image t normal = "Character/t_normal.png"
+    image t non = "Character/t_non.png"
+    image t serious = "Character/t_serious.png"
+    image t smile = "Character/t_smile.png"
+    image t surprise = "Character/t_당황.png"
+    image t far = "Character/t_등장.png"
+
+    #A
+    image a normal = "Character/a.png"
+    image a non = "Character/a_non.png"
+    image a talk = "Character/a_talk.png"
+    image a anxious = "Character/a_anxious.png"
 
 # 게임에서 사용할 캐릭터를 정의합니다.
     define s = Character("S", color = "#303030", image = "s")
@@ -59,7 +84,7 @@ label start:
     jump prologue
 
     #디버깅용 시작코드
-    #jump s_room_start
+    #jump a_room_start
 
 
 label prologue:
@@ -91,7 +116,19 @@ label prologue:
     "...언젠가부터는 어느 아이의 환영이 보이기까지 한다."
 
     hide ch_1 with dissolve
-    show ch_1 at right with dissolve
+    show ch_1:
+        yzoom -1
+        xalign 0.5
+        yalign 0.0
+
+    with moveintop
+    hide ch_1 with dissolve
+
+    show ch_1:
+        yzoom 1
+        xalign 1.0
+        yalign 1.0
+    with dissolve
     "아이는 방 한 구석에 둥둥 떠 있기도 하고, 천장에 매달려 있기도 하고, 잠에서 깬 내 얼굴 바로
     바로 앞에 얼굴을 들이밀고 있기도하다."
 
@@ -144,8 +181,8 @@ label prologue:
             "환청이 들리기 시작한다."
 
             c "막아야 해.."
-            show s surprise at left
-            show ch_2 at right
+            show s surprise at left with dissolve
+            show ch_2 at right with dissolve
             s "!"
             s "목소리…? 지금 네 목소리가 나한테 들리는 거야?"
             c "막아야 해. 아빠."

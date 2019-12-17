@@ -60,14 +60,23 @@ label scene_1_start :
 
 label scene_1_1 :
     uj "여기가 어딘지는 알아요? 밀실에 있다 왔죠?"
+    show j non
+    hide k close
+    show s talk at left with dissolve
     s "당신도 밀실에서 나왔어요? 모르겠어요. 정말. 하나도... 그 고약한 밀실에서 탈출했는데,
     도대체 뭐가 어떻게 된 건지 하나도 모르.."
-    uj "우린 꿈에 갇혔어요."
-    s "...네?"
-    uj "말 그대로에요. 여긴 꿈이에요."
-    uj "밀실을 탈출해 봤자 더 큰 방에 갇히는 꼴이죠. 우리 머리속에 갇혀 있다고요."
-    s "여, 기가...꿈..."
-    uj "꿈이 아니고서야 설명되지 않죠."
+    show s non
+    uj normal "우린 꿈에 갇혔어요."
+    show j non
+    s surprise "...네?"
+    show s non
+    uj normal "말 그대로에요. 여긴 꿈이에요."
+    uj normal "밀실을 탈출해 봤자 더 큰 방에 갇히는 꼴이죠. 우리 머리속에 갇혀 있다고요."
+    show j non
+    s surprise "여, 기가...꿈..."
+    show s non
+    uj normal "꿈이 아니고서야 설명되지 않죠."
+    show s surprise
 
     "여자는 그렇게 말하며, 한가득 쌓여있는 거대한 선물 상자들을 가리켰다."
 
@@ -149,7 +158,9 @@ label scene_1_2:
 label scene_1_end:
     # 화면 2.1 선물 상자 저녁버전.
     scene gift_background_night with dissolve
+    show a normal at right with dissolve
     a "S, 만나서 반가워."
+    show s talk at left with dissolve
     s "반가워요."
     a "말은 편하게 해. 여긴 꿈이라니까 꿈."
     s "네...아니 응"
@@ -158,11 +169,16 @@ label scene_1_end:
     "K를 얼마나 그리워했는지. 그리고 그동안 얼마나 얼음성에 다시금 들어가는 날을 고대해 왔는지를 이야기했다."
 
     a "그동안 많은 친구들과 함께 얼음성에 들어갔어. 내 역할은 얼음성에 있는 열쇠까지 가는 길을 안전하게 안내하는 거야."
+    show j worry at center with dissolve
     j "A.."
     s "당신은 탈출하지 않나요?"
     a "최대한 많은 사람들을 꿈의 세계에서 탈출시키고, 맨 마지막에 나갈 거야. 그 끝이 언제인지는 알 수 없지만."
 
     "A는 자원봉사를 해 주고 있는 꼴이었다. 어떻게 자기가 나갈 생각은 하지 않을 수 있지?"
+
+    hide a normal
+    hide s talk
+    hide j worry
 
     "그런 생각을 하고 있는데, A는 주머니에서 낡은 지도를 꺼냈다."
 
@@ -170,6 +186,9 @@ label scene_1_end:
 
     "지도는 얼마나 접었다 펼쳤다를 반복했는지 온통 헤져 있었다."
 
+    show a normal at right with dissolve
+    show s normal at left with dissolve
+    show j normal at center with dissolve
     a "나를 이상하게 생각할 수도 있겠지."
     a "그렇지만 기억나는 보람찼던 일이 하나도 없어. 처음이자 마지막 기억이 얼음성을 돌파하는 사람들을 도와준 일이야."
     j "S, A와 함께 가면 더 안전하게 열쇠까지 갈 수 있을 거야."

@@ -1,4 +1,10 @@
 #전개 파트 2 얼음성 까지의 여로 T와의 만남 등등 파트.
+init:
+    image bg_ice_castle = "scene2/얼음성.png"
+    image bg_hall = "scene2/연회장.png"
+    image bg_hall_running = "scene2/연회장_running.png"
+    image bg_hall_enter = "scene2/연회장입구.png"
+
 label scene_2_start :
     #화면 검은색 + 멀리 보이는 얼음성 조그맣게.
     "멀리 얼음성이 보인다."

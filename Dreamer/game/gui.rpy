@@ -361,7 +361,7 @@ define gui.nvl_borders = Borders(0, 10, 0, 20)
 
 ## The maximum number of NVL-mode entries Ren'Py will display. When more entries
 ## than this are to be show, the oldest entry will be removed.
-define gui.nvl_list_length = 6
+define gui.nvl_list_length = 8
 
 ## NVL-모드 항목의 높이입니다. 이것을 None으로 설정하면 항목들은 동적으로 높이를
 ## 조정합니다.
