@@ -24,6 +24,8 @@ init:
     image s relax = "Character/s_relax.png"
     image s normal = "Character/s_평범.png"
     image s non = "Character/s_non.png"
+    image s angry = "Character/s_angry.png"
+    image s cold = "Character/s_cold.png"
 
     #카슈
     image k far = "Character/ka_1.png"
@@ -34,6 +36,9 @@ init:
     image j normal = "Character/j2.png"
     image j worry = "Character/j3_worry.png"
     image j non = "Character/nonj.png"
+    image j scream = "Character/j_scream.png"
+    image j tear = "Character/j_tear.png"
+    image j standup = "Character/j_standup.png"
 
     #T
     image t normal = "Character/t_normal.png"
@@ -42,6 +47,8 @@ init:
     image t smile = "Character/t_smile.png"
     image t surprise = "Character/t_당황.png"
     image t far = "Character/t_등장.png"
+    image t cold = "Character/t_cold.png"
+    image t talk = "Character/t_talk.png"
 
     #A
     image a normal = "Character/a.png"
@@ -50,7 +57,7 @@ init:
     image a anxious = "Character/a_anxious.png"
 
 # 게임에서 사용할 캐릭터를 정의합니다.
-    define s = Character("S", color = "#303030", image = "s")
+    define s = Character("S", color = "#C8C8FF", image = "s")
     define j = Character("J", color = "#F0ACC6", image = "j")
     define uj = Character("???", color = "#F0ACC6", image = "j")
     define a = Character("A", color = "#20425E", image = "a")
@@ -84,7 +91,7 @@ label start:
     jump prologue
 
     #디버깅용 시작코드
-    #jump a_room_start
+    #jump j_room_start
 
 
 label prologue:
@@ -171,6 +178,8 @@ label prologue:
 
             "저 멀리 희미한 빛이 보이기 시작했다. 출구다!"
 
+            pause .8
+
             jump scene_1_start
 
         "그래도 아이의 말을 들어보자.":
@@ -207,6 +216,8 @@ label prologue:
             "엄청난 압력이다."
 
             "그 압력이 무엇인지, 빛이 무엇인지, 아이의 말이 무슨 말인지 이해하기도 전에 나는..."
+
+            pause .8
 
             jump scene_1_start
 

@@ -1,4 +1,8 @@
 #엔딩에 관련된 모든 것들을 적어두는 스크립트(도중 하차 엔딩 포함)
+init :
+    image bg_frozen_door = "jroom/bg_frozen_door.png"
+    image bg_avalanche = "jroom/bg_avalanche.png"
+
 label end_1_bad :
     scene black
     "J가 말했던 사냥꾼을 만났다. 사지가 묶여 어딘가로 끌려가고 있다."
@@ -9,6 +13,7 @@ label end_1_bad :
 
 label end_2_bad:
     t "네 알겠어요. 안녕히계세요..."
+    hide t with dissolve
     scene black
     "우리는 방들을 통과했지만, 결국 T가 없이는 통과하지 못하는 방에 맞딱뜨렸다."
     "{i}열린 마음으로 새 친구를 받아줄 걸.{/i} 후회했지만 이미 때는 늦었다."
@@ -17,18 +22,23 @@ label end_2_bad:
     return
 
 label end_3_bad:
+    scene bg_frozen_door
     "뒤를 돌아 문고리를 잡으려는데 문이 얼어서 열리지 않는다."
 
+    show s angry at left with dissolve
     s "문이 얼어서 열리지 않아, 봐 결국 우리 모두 죽게되었다고!"
 
+    scene bg_avalanche
     "멀리서 큰소리가 나며 눈사태가 몰려온다. 이게 무슨..."
 
+    show a talk at right with dissolve
     a "왜 얼음성을 탈출하려고 하지? 이 곳이 그냥 꿈의 세계일까?"
     a "아니, 너희는 모두 산 것도 아니고 죽은 것도 아닌 상태야. 현실에서는 코마라고 부르던데, 혼수상태 말이야."
     a "너희는 모두 외롭게 살다가 지금은 코마에 빠져서 산 것도 아니고 죽은 것도 아닌 채로 누워있어."
     a "나도 마찬가지지. 돌아가고 싶지 않지 않나?"
     a "그래서 내 꿈은 이런 불쌍한 너희들을 모두 모아서 얼음성에서 같이 사는거야. 아무도 돌아가지 말고 이 얼음성에서 영원히..."
 
+    scene black with dissolve
     "{b}GAME OVER{/b}" (what_color = "#f00", what_size = 28)
     return
 

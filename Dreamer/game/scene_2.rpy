@@ -6,10 +6,14 @@ init:
     image bg_hall_enter = "scene2/연회장입구.png"
     image bg_hall_hide = "scene2/연회장숨기.png"
     image bg_hall_hide_wt = "scene2/연회장숨기_t팔.png"
+    transform slightright:
+        xalign 0.15
+        yalign 1.0
 
 label scene_2_start :
     #화면 검은색 + 멀리 보이는 얼음성 조그맣게.
-    scene bg_ice_castle with dissolve
+    scene bg_ice_castle
+    play music "audio/Scene2.mp3" fadeout 1
     "멀리 얼음성이 보인다."
 
     "멀리서 보아도 얼음성의 위용은 엄청났다. 하늘 끝까지 뻗은 뾰족한 얼음 첨탑과, 두꺼운 기둥들..."
@@ -96,6 +100,7 @@ label scene_2_1:
     t "여러분"
     show j worry at left with dissolve
     j "으아아아아악!"
+    show k close at slightright behind j with dissolve
     k "....!!"
     show a anxious:
         xzoom 1
@@ -138,6 +143,7 @@ label scene_2_2:
     show j normal at left with dissolve
     j "그래서 아까 출입증도..."
     t "봐준 거죠. 다른 웨이터가 봤으면 국물도 없었을 거에요. 누가봐도 위조였거든요. "
+    show k close at slightright behind j with dissolve
     k "멍!"
     show a anxious at right with dissolve
     a "너무 티났나..."

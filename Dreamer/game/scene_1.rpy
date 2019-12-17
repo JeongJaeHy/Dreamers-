@@ -7,7 +7,7 @@ init:
 
 label scene_1_start :
     scene gift_background with dissolve
-    stop music fadeout 1
+    play music "audio/Scene1.mp3" fadeout 1
 
     "여긴 어디지?"
 
@@ -41,7 +41,6 @@ label scene_1_start :
     "{i}아, 사람, 사람이다!{/i} 나는 안도감에 울 것만 같았다."
 
     #J 숨을 헐떡이면서(이건 캐릭터 움직임으로 표현해보기)
-    show k close at left
     show j breathe at right with dissolve
     uj "카슈, 멀리가지 말랬잖아."
 
@@ -61,23 +60,16 @@ label scene_1_start :
 
 label scene_1_1 :
     uj "여기가 어딘지는 알아요? 밀실에 있다 왔죠?"
-    show j non
-    hide k close
     show s talk at left with dissolve
     s "당신도 밀실에서 나왔어요? 모르겠어요. 정말. 하나도... 그 고약한 밀실에서 탈출했는데,
     도대체 뭐가 어떻게 된 건지 하나도 모르.."
-    show s non
-    uj normal "우린 꿈에 갇혔어요."
-    show j non
+    uj "우린 꿈에 갇혔어요."
     s surprise "...네?"
-    show s non
-    uj normal "말 그대로에요. 여긴 꿈이에요."
-    uj normal "밀실을 탈출해 봤자 더 큰 방에 갇히는 꼴이죠. 우리 머리속에 갇혀 있다고요."
-    show j non
-    s surprise "여, 기가...꿈..."
-    show s non
-    uj normal "꿈이 아니고서야 설명되지 않죠."
-    show s surprise
+    uj "말 그대로에요. 여긴 꿈이에요."
+    uj "밀실을 탈출해 봤자 더 큰 방에 갇히는 꼴이죠. 우리 머리속에 갇혀 있다고요."
+    s "여, 기가...꿈..."
+    uj "꿈이 아니고서야 설명되지 않죠."
+
 
     "여자는 그렇게 말하며, 한가득 쌓여있는 거대한 선물 상자들을 가리켰다."
 
