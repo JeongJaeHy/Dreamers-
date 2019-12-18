@@ -105,7 +105,7 @@ init:
 
 # 여기에서부터 게임이 시작합니다.
 label start:
-    #jump prologue
+    jump prologue
 
     #디버깅용 시작코드
     #jump endnote
