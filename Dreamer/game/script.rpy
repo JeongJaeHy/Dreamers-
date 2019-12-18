@@ -108,7 +108,7 @@ label start:
     #jump prologue
 
     #디버깅용 시작코드
-    jump endnote
+    #jump endnote
 
 
 label prologue:
