@@ -25,6 +25,9 @@ init:
     image s normal = "Character/s_평범.png"
     image s angry = "Character/s_angry.png"
     image s cold = "Character/s_cold.png"
+    image s sit = "Character/s_sit.png"
+    image s scream = "Character/s_scream.png"
+    image s give_up = "Character/s_give_up.png"
 
     #카슈
     image k far = "Character/ka_1.png"
@@ -84,6 +87,8 @@ init:
     # t의 방에서 사다리를 챙겼는가에 대한 변수.
     $ a_room_check = False
     # 두 번째 선택지.
+    $ save_j = False
+    # J에게 양보했는가.
 
     #transform 정리
     transform slightright:
@@ -100,10 +105,10 @@ init:
 
 # 여기에서부터 게임이 시작합니다.
 label start:
-    jump prologue
+    #jump prologue
 
     #디버깅용 시작코드
-    #jump t_room_end
+    jump endnote
 
 
 label prologue:
@@ -140,7 +145,7 @@ label prologue:
     show ch_1:
         yzoom -1
         xalign 0.5
-        yalign 0.0
+        linear 2 yalign 0.0
 
     with moveintop
     hide ch_1 with dissolve

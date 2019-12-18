@@ -98,3 +98,44 @@ label note5: #s 노트
     narr_nvl "하지만 그 맛은 이젠 다시는 가 닿을 수 없는 맛이 되었다." (what_color = "#000", what_size = 22)
 
     return
+
+label endnote:
+    play music "audio/Ending.mp3" fadeout 1
+    scene white with dissolve
+    scene black
+    nvl clear
+    narr_nvl "어렸을 때 나는 빵이나 마카롱을 만드는 파티쉐가 되겠다고 생각했었다." (what_color = "#000", what_size = 22)
+    narr_nvl "부모님은 그런 나를 파리의 요리 전문 학교에 보내주겠다며 웃어주셨지. \n" (what_color = "#000", what_size = 22)
+
+    narr_nvl "풍족한 유년기를 거쳐 나는 무엇을 했던가." (what_color = "#000", what_size = 22)
+    narr_nvl "아버지의 사업 실패로 시작된 기울어지는 가세, 갑작스러운 아버지의 사고, 늘어나는 빚. 불행은 갑작스레 연이어 찾아왔다." (what_color = "#000", what_size = 22)
+    narr_nvl "어머니는 스무 살도 되지 못한 나를 남겨두고 스스로 목숨을 끊었다." (what_color = "#000", what_size = 22)
+    narr_nvl "어머니가 남겨놓은 사망보험금이 나를 짓눌렀고 나는 그 돈으로 어떻게든 살아남아야만 했다. \n" (what_color = "#000", what_size = 22)
+
+    narr_nvl "온갖 일을 다 해 보았다. 나름대로 자격증도 따고, 돈 되는 일이라면 최선을 다해 하면서." (what_color = "#000", what_size = 22)
+    narr_nvl "20대와 30대를 요식업을 하며 보냈다. 그 중 프랜차이즈 치킨장사는 매출이 가장 좋은 편이었다.
+    하지만 어느 순간 늘어나는 치킨집들에 손님은 점점 줄었고 나는 예전에 따 둔 자격증으로 초밥을 만들겠다고 생각했다. 그 뒤로는 쭉 횟집을 했다. \n" (what_color = "#000", what_size = 22)
+
+    narr_nvl "결혼은 하지 못했다. 내가 사랑하는 사람들이 불행에 빠지지 않게 할 자신이 없었다. 갑자기 무너져버린 내 가족을 생각하면서. \n" (what_color = "#000", what_size = 22)
+
+    nvl clear
+    narr_nvl "손을 다치고 난 뒤엔 손이 떨려 더 이상 칼을 잡을 수 없었다." (what_color = "#000", what_size = 22)
+    narr_nvl "그렇게 나는 늙어갔고" (what_color = "#000", what_size = 22)
+    narr_nvl "이른 새벽마다 음식물 쓰레기 수거 차에 매달려 음식물 쓰레기 봉투를 수거했다." (what_color = "#000", what_size = 22)
+    narr_nvl "내 직업에 나는 불만이 없었다. 이렇게라도 일 할 수 있다는 것이 얼마나 감사했는지. \n" (what_color = "#000", what_size = 22)
+
+    narr_nvl "그러다 교통사고가 있었고.. 코마상태에 빠졌었다." (what_color = "#000", what_size = 22)
+    narr_nvl "지금 나는 음식으로 이어지는 내 인생의 궤적을 되짚는다." (what_color = "#000", what_size = 22)
+    narr_nvl "그리고 코마 상태에서 있었던 일들을 떠올린다." (what_color = "#000", what_size = 22)
+    narr_nvl "내가 진실로 죽기 전에 떠올릴 장면은 과연 무엇일까." (what_color = "#000", what_size = 22)
+
+    if save_j == True:
+        scene white with dissolve
+        centered "{b}- END -{/b}" (what_color = "#F0ACC6", what_size = 50)
+
+        return
+    else:
+        scene black with dissolve
+        centered "{b}- END -{/b}" (what_color = "#C8C8FF", what_size = 50)
+
+        return

@@ -10,7 +10,6 @@ init:
 label scene_2_start :
     #화면 검은색 + 멀리 보이는 얼음성 조그맣게.
     scene bg_ice_castle
-    play music "audio/Scene2.mp3" fadeout 1
     "멀리 얼음성이 보인다."
 
     "멀리서 보아도 얼음성의 위용은 엄청났다. 하늘 끝까지 뻗은 뾰족한 얼음 첨탑과, 두꺼운 기둥들..."
@@ -29,6 +28,7 @@ label scene_2_start :
     scene black with dissolve
 
     scene bg_hall_enter with dissolve
+    play music "audio/Scene2.mp3" fadeout 1
     "A는 얼음성의 문을 열었다. 살짝 열린 틈으로 흥겨운 노랫소리가 흘러나왔다."
 
     show a normal at right with dissolve
@@ -94,6 +94,7 @@ label scene_2_1:
     scene bg_hall_hide with fade
 
     show t far at center with dissolve
+    play music "audio/T_meet.mp3" fadeout 1
     t "여러분"
     show j worry at left with dissolve
     j "으아아아아악!"

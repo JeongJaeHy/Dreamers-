@@ -92,6 +92,7 @@ label end_true_1: #2번 엔딩.
     scene black with dissolve
     scene white with dissolve
     play music "audio/Ending.mp3" fadeout 1
+    $ save_j = True
 
     #눈을 뜨는 J 젊은 사람. 눈을 감고 누워있는 S 노인.
 
@@ -104,7 +105,9 @@ label end_true_1: #2번 엔딩.
     "그 말을 듣고 나는 내 육체가 곧 사라진다는 것에 대한 두려움보다, 아직 살 날이 많은 J를 위해 열쇠를 양보해 주었다는 사실에 대한 안도감이 컸다."
     "그렇기에 나는 그 때의 선택을 후회하지 않는다..."
 
-    "{b}- END -{/b}" (what_color = "#F0ACC6", what_size = 28)
+    jump endnote
+
+    #"{b}- END -{/b}" (what_color = "#F0ACC6", what_size = 28)
 
     return
 
@@ -128,7 +131,9 @@ label end_true_2: #3번 엔딩.
     "꿈의 세계를 홀로 나오고 나서야 나는 모든 것을 알게 되었다…."
 
     #6.2 슬퍼하는 S 눈물 떨어지는 것.
-    "{b}- END -{/b}" (what_color = "#CBCBCB", what_size = 28)
+
+    jump endnote
+    #"{b}- END -{/b}" (what_color = "#CBCBCB", what_size = 28)
 
 label end_true_3: #4번 엔딩.
     #화면 1. 어두워지고 밝아짐.
@@ -148,4 +153,5 @@ label end_true_3: #4번 엔딩.
     "나는 왜 그런 선택을 했을까."
     "꿈의 세계를 홀로 나오고 나서야 나는 모든 것을 알게 되었다…."
 
-    "{b}- END -{/b}" (what_color = "#CBCBCB", what_size = 28)
+    jump endnote
+    #"{b}- END -{/b}" (what_color = "#CBCBCB", what_size = 28)
