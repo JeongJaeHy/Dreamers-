@@ -15,8 +15,12 @@ init:
 
     #캐릭터 이미지 정의.
     #아이
-    image ch_1 = "Character/ch_1.png"
-    image ch_2 = "Character/ch_2.png"
+    image ch 1 = "Character/ch_1.png"
+    image ch 2 = "Character/ch_2.png"
+    image ch hospital = "Character/ch_hospital.png"
+    image ch shape_s = "Character/ch_shape_s.png"
+    image ch shape_m = "Character/ch_shape_m.png"
+    image ch shape_l = "Character/ch_shape_l.png"
 
     #S
     image s surprise = "Character/s_1.png"
@@ -57,12 +61,14 @@ init:
     image a talk = "Character/a_talk.png"
     image a anxious = "Character/a_anxious.png"
     image a point = "Character/a_point.png"
+    image a help = "Character/a_help.png"
 
 # 게임에서 사용할 캐릭터를 정의합니다.
     define s = Character("S", color = "#C8C8FF", image = "s")
     define j = Character("J", color = "#F0ACC6", image = "j")
     define uj = Character("???", color = "#F0ACC6", image = "j")
-    define a = Character("A", color = "#20425E", image = "a")
+    define a = Character("A", color = "#7B593B", image = "a")
+    #20425E
     define t = Character("T", color = "#E39861", image = "t")
     define k = Character("카슈", color = "#EBE3CE", image = "k")
     define c = Character("아이", color = "#cbcbcb", image = "ch")
@@ -73,7 +79,7 @@ init:
 
     $ c_select = False
     $ j_para = 0
-    $ a_para = 0
+    $ a_para = 4
     $ aj_check = False
     #A와 J 비교하기 위한 Boolean 변수
     #A >= J인 경우 True
@@ -105,10 +111,10 @@ init:
 
 # 여기에서부터 게임이 시작합니다.
 label start:
-    jump prologue
+    #jump prologue
 
     #디버깅용 시작코드
-    #jump endnote
+    jump a_room_start
 
 
 label prologue:
@@ -138,19 +144,19 @@ label prologue:
     그런 생각에 가 닿을 때면 나는 괴로움에 몸부림친다."
 
     #아이 환영 등장
-    show ch_1 at left
+    show ch 1 at left
     "...언젠가부터는 어느 아이의 환영이 보이기까지 한다."
 
-    hide ch_1 with dissolve
-    show ch_1:
+    hide ch 1 with dissolve
+    show ch 1:
         yzoom -1
         xalign 0.5
         linear 2 yalign 0.0
 
     with moveintop
-    hide ch_1 with dissolve
+    hide ch 1 with dissolve
 
-    show ch_1:
+    show ch 1:
         yzoom 1
         xalign 1.0
         yalign 1.0
@@ -177,7 +183,7 @@ label prologue:
     "드디어 이 밀실을 탈출할 수 있게 되었다."
 
     # 아이의 환영 추가
-    show ch_2 at center with dissolve
+    show ch 2 at center with dissolve
     "그 순간 아이의 환영이 다시 나타났다. 저 모습..처음으로 무어라 말을 하려는 듯 입술을 달싹이고 있다."
 
     #"{size=+5}{color=#aaa}{i}나갈까?{/i}{/color}{/size}  그렇게 생각하는데 벽 한 구석에 또다시 아이의 환영이 나타났다."
@@ -210,7 +216,7 @@ label prologue:
 
             c "막아야 해.."
             show s surprise at left with dissolve
-            show ch_2 at right with dissolve
+            show ch 2 at right with dissolve
             s "!"
             s "목소리…? 지금 네 목소리가 나한테 들리는 거야?"
             c "막아야 해. 아빠."
@@ -226,7 +232,7 @@ label prologue:
 
             "이 아이는 도대체 정체가 뭐야."
 
-            hide ch_2 with dissolve
+            hide ch 2 with dissolve
             scene pro_exit with dissolve
             "환영에게 무언가를 더 물어보려 했지만 강한 빛이 나타났다."
 
@@ -249,7 +255,7 @@ label a_larger_than_j:
     return
 
 screen stats_button_screen() :
-    textbutton "스탯" :
+    textbutton "친밀도 확인" :
         # action : "스탯"버튼이 눌렸을 때 실행할 행동
         # if문 해석 : stats_screen이 켜져있으면 Hide하고, 꺼져있으면 Show해라.
         action If(renpy.get_screen("stats_screen"), Hide("stats_screen"), Show("stats_screen"))
@@ -266,12 +272,6 @@ screen stats_screen() :
         vbox:
             spacing 3
             align(1.0, 0.5)
-            text "{u}Stats:{/u}"
-            text "J파라미터: [j_para]"
-            text "A파라미터: [a_para]"
-            text "아이 선택: [c_select]"
-            text "A가 크면 True: [aj_check]"
-            text "카슈 얼리기: [k_check]"
-            text "A가 아이 얘기: [a_talk_c]"
-            text "T방 사다리: [t_check]"
-            text "A방 열쇠: [a_room_check]"
+            text "{u}친밀도:{/u}"
+            text "J와의 친밀도: [j_para]"
+            text "A와의 친밀도: [a_para]"

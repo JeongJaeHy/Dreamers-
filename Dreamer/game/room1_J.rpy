@@ -2,7 +2,7 @@
 init:
     image bg_box = "jroom/bg_box.png"
     image bg_cliff = "jroom/bg_cliff.png"
-    image bg_end = "jroom/bg_end.png"
+    image bg_end_j = "jroom/bg_end.png"
     image bg_frozen_door = "jroom/bg_frozen_door.png"
     image bg_j_run = "jroom/bg_j_run.png"
     image bg_jroom = "jroom/bg_jroom.png"
@@ -217,7 +217,7 @@ label j_room_3: #4
 
             j standup "그래, 카슈도 내가 살아서 행복하기를 바랄거야, 가자."
 
-            scene bg_end with dissolve
+            scene bg_end_j with dissolve
             "우리는 방을 나섰다."
 
             call note3
@@ -257,7 +257,7 @@ label j_room_3: #4
 
                     j standup "그래, 카슈도 내가 살아서 행복하기를 바랄거야, 가자."
 
-                    scene bg_end with dissolve
+                    scene bg_end_j with dissolve
                     "우리는 방을 나섰다."
 
                     call note3
@@ -304,7 +304,7 @@ label j_room_4: #5
             s "봐 우리 벌써 얼기 시작했다고. 곧 있으면 이 방이 무너질거야. 카슈가 원하는 건 네가 죽어서 카슈와 함께 하는 건 아닐거야. 나가자 빨리."
 
             scene black with dissolve
-            scene bg_end
+            scene bg_end_j
             "나는 J를 억지로 끌고 방을 나갔다."
 
             call note3

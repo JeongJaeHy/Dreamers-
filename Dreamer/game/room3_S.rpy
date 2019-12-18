@@ -2,7 +2,7 @@
 init:
     image bg_road = "sroom/bg_road.png"
     image bg_crossroad = "sroom/bg_crossroad.png"
-    image bg_end = "sroom/bg_end.png"
+    image bg_end_s = "sroom/bg_end.png"
     image bg_table = "sroom/bg_table.png"
     image bg_table_collapse = "sroom/bg_table_collapse.png"
     image bg_table_blur = "sroom/bg_table_blur.png"
@@ -278,6 +278,8 @@ label s_room_2_a:
                     scene bg_table2_frozen with hpunch
                     "방이 점점 붕괴하기 시작하고, 나는 어머니 머리 위로 큰 샹들리에가 떨어지는 것을 마지막으로 눈에 담고, 방을 빠져나왔다."
                     "어린 나의 울음소리가 머릿속에서 맴돌았다."
+                    scene bg_end_s with dissolve
+                    pause .8
 
                     call note5
                     jump a_room_start
@@ -312,7 +314,7 @@ label s_room_2_a:
             "방을 흔드는 진동이 점점 강해지고, 천장에서 샹들리에가 떨어져 접시들을 박살내며 테이블이 이상한 모양으로 뒤틀리기 시작한다."
             "다시 멈춰 서고 싶지만 A가 나를 떠미는 탓에 멈춰 설 수 없다."
             "간발의 차이로 방이 붕괴되고, 나는 문 밖으로 나동그라졌다."
-            scene bg_end with dissolve
+            scene bg_end_s with dissolve
             pause .8
 
             call note5
@@ -497,6 +499,8 @@ label s_room_2_j:
                     scene bg_table2_frozen with hpunch
                     "방이 점점 붕괴하기 시작하고, 나는 어머니 머리 위로 큰 샹들리에가 떨어지는 것을 마지막으로 눈에 담고, 방을 빠져나왔다."
                     "어린 나의 울음소리가 머릿속에서 맴돌았다."
+                    scene bg_end_s with dissolve
+                    pause .8
 
                     call note5
                     jump a_room_start
@@ -531,7 +535,7 @@ label s_room_2_j:
             "방을 흔드는 진동이 점점 강해지고, 천장에서 샹들리에가 떨어져 접시들을 박살내며 테이블이 이상한 모양으로 뒤틀리기 시작한다."
             "다시 멈춰 서고 싶지만 J가 나를 떠미는 탓에 멈춰 설 수 없다."
             "간발의 차이로 방이 붕괴되고, 나는 문 밖으로 나동그라졌다."
-            scene bg_end with dissolve
+            scene bg_end_s with dissolve
             pause .8
 
             call note5
