@@ -23,7 +23,6 @@ init:
     image s talk = "Character/s_2_talk.png"
     image s relax = "Character/s_relax.png"
     image s normal = "Character/s_평범.png"
-    image s non = "Character/s_non.png"
     image s angry = "Character/s_angry.png"
     image s cold = "Character/s_cold.png"
 
@@ -35,14 +34,14 @@ init:
     image j breathe = "Character/j1.png"
     image j normal = "Character/j2.png"
     image j worry = "Character/j3_worry.png"
-    image j non = "Character/nonj.png"
+    image j relief = "Character/j_relief.png"
     image j scream = "Character/j_scream.png"
     image j tear = "Character/j_tear.png"
     image j standup = "Character/j_standup.png"
+    image j lonely = "Character/j_lonely.png"
 
     #T
     image t normal = "Character/t_normal.png"
-    image t non = "Character/t_non.png"
     image t serious = "Character/t_serious.png"
     image t smile = "Character/t_smile.png"
     image t surprise = "Character/t_당황.png"
@@ -52,9 +51,9 @@ init:
 
     #A
     image a normal = "Character/a.png"
-    image a non = "Character/a_non.png"
     image a talk = "Character/a_talk.png"
     image a anxious = "Character/a_anxious.png"
+    image a point = "Character/a_point.png"
 
 # 게임에서 사용할 캐릭터를 정의합니다.
     define s = Character("S", color = "#C8C8FF", image = "s")
@@ -86,12 +85,25 @@ init:
     $ a_room_check = False
     # 두 번째 선택지.
 
+    #transform 정리
+    transform slightright:
+        xalign 0.15
+        yalign 1.0
+
+    transform centerleft:
+        xalign 0.25
+        yalign 1.0
+
+    transform centerright:
+        xalign 0.75
+        yalign 1.0
+
 # 여기에서부터 게임이 시작합니다.
 label start:
     jump prologue
 
     #디버깅용 시작코드
-    #jump j_room_start
+    #jump t_room_end
 
 
 label prologue:

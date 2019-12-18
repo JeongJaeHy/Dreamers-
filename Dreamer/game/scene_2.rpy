@@ -6,9 +6,6 @@ init:
     image bg_hall_enter = "scene2/연회장입구.png"
     image bg_hall_hide = "scene2/연회장숨기.png"
     image bg_hall_hide_wt = "scene2/연회장숨기_t팔.png"
-    transform slightright:
-        xalign 0.15
-        yalign 1.0
 
 label scene_2_start :
     #화면 검은색 + 멀리 보이는 얼음성 조그맣게.
