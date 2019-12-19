@@ -190,5 +190,5 @@ label scene_1_end:
     j "S, A와 함께 가면 더 안전하게 열쇠까지 갈 수 있을 거야."
     s relax "좋아. 함께 가 보자."
 
-    call note1
+    call note1 from _call_note1
     jump scene_2_start

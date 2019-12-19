@@ -13,7 +13,7 @@ init:
     image bg_parent_coldoor = "sroom/bg_parent_coldoor.png"
 
 label s_room_start :
-    call a_larger_than_j
+    call a_larger_than_j from _call_a_larger_than_j
     play music "audio/S_room.mp3" fadeout 1
     #scene 1 : 검정 배경에 네 갈래 갈림길
 
@@ -281,7 +281,7 @@ label s_room_2_a:
                     scene bg_end_s with dissolve
                     pause .8
 
-                    call note5
+                    call note5 from _call_note5
                     jump a_room_start
 
                 "혹시 모를 기적이 있지 않을까. 도저히 도망칠 수가 없다.":
@@ -297,7 +297,7 @@ label s_room_2_a:
                     scene bg_table2_frozen with vpunch
                     "문이 닫히기 전 마지막으로 본 방 안에는 새하얗게 얼은 어머니와 아버지가 못 박힌 듯 서 있었다."
 
-                    call note5
+                    call note5 from _call_note5_1
                     jump a_room_start
 
         "A를 따라 문으로 달려간다.":
@@ -317,7 +317,7 @@ label s_room_2_a:
             scene bg_end_s with dissolve
             pause .8
 
-            call note5
+            call note5 from _call_note5_2
             jump a_room_start
 
 label s_room_1_j:
@@ -502,7 +502,7 @@ label s_room_2_j:
                     scene bg_end_s with dissolve
                     pause .8
 
-                    call note5
+                    call note5 from _call_note5_3
                     jump a_room_start
 
                 "혹시 모를 기적이 있지 않을까. 도저히 도망칠 수가 없다.":
@@ -518,7 +518,7 @@ label s_room_2_j:
                     scene bg_table2_frozen with vpunch
                     "문이 닫히기 전 마지막으로 본 방 안에는 새하얗게 얼은 어머니와 아버지가 못 박힌 듯 서 있었다."
 
-                    call note5
+                    call note5 from _call_note5_4
                     jump a_room_start
 
         "J를 따라 문으로 달려간다.":
@@ -538,5 +538,5 @@ label s_room_2_j:
             scene bg_end_s with dissolve
             pause .8
 
-            call note5
+            call note5 from _call_note5_5
             jump a_room_start

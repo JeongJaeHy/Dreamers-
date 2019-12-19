@@ -520,6 +520,6 @@ label t_room_end:
     "혼자 남은 T는 쓸쓸한 복도와 창 너머의 회색빛 정원을 찬찬히 바라보고 있었다."
     "나는 다시 발걸음을 옮겼다."
 
-    call note4
+    call note4 from _call_note4
 
     jump s_room_start

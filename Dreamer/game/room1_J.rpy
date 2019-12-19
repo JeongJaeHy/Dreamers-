@@ -220,7 +220,7 @@ label j_room_3: #4
             scene bg_end_j with dissolve
             "우리는 방을 나섰다."
 
-            call note3
+            call note3 from _call_note3
             jump t_room_start
 
         "J를 말리지 않는다.":
@@ -260,7 +260,7 @@ label j_room_3: #4
                     scene bg_end_j with dissolve
                     "우리는 방을 나섰다."
 
-                    call note3
+                    call note3 from _call_note3_1
                     jump t_room_start
 
                 "J를 위로하지 않는다.":
@@ -307,7 +307,7 @@ label j_room_4: #5
             scene bg_end_j
             "나는 J를 억지로 끌고 방을 나갔다."
 
-            call note3
+            call note3 from _call_note3_2
             jump t_room_start
 
         "J가 얼음성에 남으면 내가 열쇠를 가지고 이 곳을 탈출할 수 있잖아? J를 얼음성에 남도록 한다.":

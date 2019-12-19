@@ -367,7 +367,7 @@ screen main_menu():
     style_prefix "main_menu"
 
     #add gui.main_menu_background
-    add "images/dreamer.jpg"
+    add "gui/main_menu.png"
 
     ## This empty frame darkens the main menu.
     frame:

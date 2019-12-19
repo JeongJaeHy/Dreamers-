@@ -275,5 +275,5 @@ screen stats_screen() :
             spacing 3
             align(1.0, 0.5)
             text "{u}친밀도:{/u}"
-            text "J와의 친밀도: [j_para]"
-            text "A와의 친밀도: [a_para]"
+            text " J와의 친밀도: [j_para] "
+            text " A와의 친밀도: [a_para] "

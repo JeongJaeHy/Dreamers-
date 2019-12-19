@@ -174,5 +174,5 @@ label scene_2_end:
     "T, A, 카슈, 나, J… 우리는 또 다시 나 있는 문 앞으로 함께 다가갔다."
     "J가 문을 열었다. 세찬 한기가 훅 끼쳐왔다."
 
-    call note2
+    call note2 from _call_note2
     jump j_room_start
