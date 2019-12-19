@@ -311,7 +311,7 @@ label climax_good_said:
     s "그동안 고마웠어요..!"
     t "두 분도 몸 조심하세요..!"
 
-    scene balck with dissolve
+    scene black with dissolve
     "결국 T가 남게 되었다. 뭐라 표현하기 힘든 부채감이 느껴진다."
     "살면서 이렇게 끔찍한 고민을 한 적이 있던가...?"
 

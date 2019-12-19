@@ -889,7 +889,7 @@ label a_room_end_a:
         t "어서 가요!"
         j worry "아무래도 S를 부축해야겠어요."
         t "네, 일단 갑시다."
-        scene balck with dissolve
+        scene black with dissolve
         pause .5
 
         jump climax_start_good_a
