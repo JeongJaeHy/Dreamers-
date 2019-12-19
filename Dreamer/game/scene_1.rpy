@@ -3,6 +3,7 @@ init:
     image gift_background = "scene1/gift_background.png"
     image gift_background_night = "scene1/gift_background_night.png"
     image snj = "scene1/snj.png"
+    image map = "scene1/map.png"
 
 
 label scene_1_start :
@@ -172,6 +173,7 @@ label scene_1_end:
     hide a normal
     hide s talk
     hide j worry
+    show map with dissolve
 
     "그런 생각을 하고 있는데, A는 주머니에서 낡은 지도를 꺼냈다."
 

@@ -96,6 +96,8 @@ init:
     $ save_j = False
     # J에게 양보했는가.
 
+    define flashbulb = Fade(0.2, 0.0, 0.8, color='#fff')
+
     #transform 정리
     transform slightright:
         xalign 0.15
@@ -111,10 +113,10 @@ init:
 
 # 여기에서부터 게임이 시작합니다.
 label start:
-    jump prologue
+    #jump prologue
 
     #디버깅용 시작코드
-    #jump a_room_start
+    jump a_room_1
 
 
 label prologue:

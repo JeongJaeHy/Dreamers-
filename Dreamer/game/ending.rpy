@@ -2,6 +2,10 @@
 init :
     image bg_frozen_door = "jroom/bg_frozen_door.png"
     image bg_avalanche = "jroom/bg_avalanche.png"
+    image end_hospital = "ending/end_hospital.png"
+    image ending = "ending/ending.png"
+    image ending2 = "ending/ending2.png"
+    image s_dead = "ending/s_dead.png"
 
 label end_1_bad :
     scene black
@@ -91,10 +95,16 @@ label end_true_1: #2번 엔딩.
     #화면 1 연습. 어두워지고 밝아짐.
     scene black with dissolve
     scene white with dissolve
+    pause .5
     play music "audio/Ending.mp3" fadeout 1
     $ save_j = True
 
-    #눈을 뜨는 J 젊은 사람. 눈을 감고 누워있는 S 노인.
+    scene end_hospital with dissolve
+    pause 2
+    scene ending with dissolve
+    pause 4
+    scene s_dead with dissolve
+    pause 3
 
     scene black with dissolve
 
@@ -115,15 +125,15 @@ label end_true_2: #3번 엔딩.
     #화면 1. + 병실 소리
     scene black with dissolve
     scene white with dissolve
+    pause .5
     play music "audio/Ending.mp3" fadeout 1
-    #화면 6.1 J의 죽음. 눈을 뜨는 늙은 S, 고개를 돌리자 눈을 감고 누워있는 J
-
+    scene end_hospital with dissolve
     s "여긴… 병실인가…?"
 
     "고개를 돌려보니 {i}<S, 68세, 교통사고, 코마 환자>{/i} 라는 진료 카드가 보인다."
     "옆 침대엔...."
 
-    #화면 전환?
+    scene ending2 with dissolve
     "꿈의 세계에서 본 것과 똑같은 모습의 젊은 J가 고요히 눈을 감고 누워있다."
 
     "옆 침대에 누워 있는 J의 젊은 얼굴과, 나의 늙은 손을 번갈아 바라보았다."
@@ -139,14 +149,15 @@ label end_true_3: #4번 엔딩.
     #화면 1. 어두워지고 밝아짐.
     scene black with dissolve
     scene white with dissolve
+    pause .5
     play music "audio/Ending.mp3" fadeout 1
-    # 6.1 J의 죽음. 자신과 J의 모습을 인식하는 S
+    scene end_hospital with dissolve
     s "여긴… 병실인가…?"
 
     "고개를 돌려보니 {i}<S, 68세, 교통사고, 코마 환자>{/i} 라는 진료 카드가 보인다."
     "옆 침대엔...."
 
-    #화면 전환?
+    scene ending2 with dissolve
     "꿈의 세계에서 본 것과 똑같은 모습의 젊은 J가 고요히 눈을 감고 누워있다."
 
     "옆 침대에 누워 있는 J의 젊은 얼굴과, 나의 늙은 손을 번갈아 바라보았다."

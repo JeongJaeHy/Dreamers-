@@ -399,6 +399,7 @@ label a_room_1:
                 #발자국 sound
                 scene black with dissolve
                 pause .5
+                jump a_room_debug
 
             else:
                 a anxious "..."
@@ -427,44 +428,7 @@ label a_room_1:
                 #발자국 sound
                 scene black with dissolve
                 pause .5
-
-            scene bg_vip2hole at dissolve
-            show s talk at left with moveinleft
-            s "J!!!"
-            show t talk at center with dissolve
-            t "또 싱크홀이 생겼어요."
-            show j breathe at centerleft with dissolve
-            j "헉..헉.."
-            j worry "정말 간신히 피했어. 조금만 늦었어도 죽을 뻔했다고!"
-            t serious "정말 위험했어요. 여기 나가는 게 어떨까요?"
-            j "나가야 해요. 나가자. 이곳에만 단서가 있는 건 아닐 거 아니야?"
-            j "아니, 적어도 지금 이 순간만큼은 여기를 벗어나야 할 거 같아. 불안해서 뭘 할 수가 없어."
-            show a talk at right with dissolve
-            a "이곳에 분명 단서가 있어. 저번에도 그랬고, 이번에도 그럴거야."
-            show j scream:
-                xzoom -1
-            j "구멍이 생기는게 드문 일이라며! 지금 봐, 벌써 두번이나 생겼다고! 오늘은 뭔가가 이상하다니까!"
-            a "나가고 싶으면 그 정도 위험은 감수해야하지 않겠어? 나가도 위험한 건 마찬가지야. 만약 여기에 문이 있으면 어쩔거야?"
-            s "둘 다 일단 진정해."
-            show j lonely:
-                xzoom -1
-            j "진정할 수가 없어. 죽을 뻔했다니까 S? 여기는 너무 불안정해. 나가야 해."
-            a "이곳에 분명 나가는 문이 있어. 앞으론 조금 더 조심하면서 다니면 돼."
-            j "T, 어떻게 생각해요?"
-            t "저도 여기에 더 이상 머물 용기가 안나요. 우리 일단 나가보는게.."
-            a "S, 너도 나가고 싶어?"
-            s surprise "나?"
-
-            "어쩌지..?"
-            "A.. 아무래도 아내를 꼭 만나고 싶어하는 눈치인데.. 아무도 못 만나고 그냥 나가버리는 건 너무..."
-
-            if a_talk_c == True :
-                "어쩌면 아이도 만날 수 있을 텐데.."
-                "말을 하지는 않았지만... 아이도 정말 만나고 싶을 거야..."
-            "A가 이곳에 몇 번 와봤다니까 A 말대로 여기서 단서를 찾는 게 맞는 것일 수도 있고.."
-            "하지만 너무 위험해 보이긴 하는데.. 구멍에 빠지면 끝인 거잖아.. 어쩌지..."
-
-            jump a_room_2
+                jump a_room_debug
 
 
         "단서를 찾는 것에 집중한다.":
@@ -1070,3 +1034,43 @@ label a_room_end_evade:
         show black with vpunch
 
         jump climax_start_bad_a
+
+label a_room_debug:
+    scene bg_vip2hole at dissolve
+
+    show s talk at left with moveinleft
+    s "J!!"
+    show t talk at center with dissolve
+    t "또 싱크홀이 생겼어요."
+    show j breathe at centerleft with dissolve
+    j "헉..헉.."
+    j worry "정말 간신히 피했어. 조금만 늦었어도 죽을 뻔했다고!"
+    t serious "정말 위험했어요. 여기 나가는 게 어떨까요?"
+    j "나가야 해요. 나가자. 이곳에만 단서가 있는 건 아닐 거 아니야?"
+    j "아니, 적어도 지금 이 순간만큼은 여기를 벗어나야 할 거 같아. 불안해서 뭘 할 수가 없어."
+    show a talk at right with dissolve
+    a "이곳에 분명 단서가 있어. 저번에도 그랬고, 이번에도 그럴거야."
+    show j scream:
+        xzoom -1
+    j "구멍이 생기는게 드문 일이라며! 지금 봐, 벌써 두번이나 생겼다고! 오늘은 뭔가가 이상하다니까!"
+    a "나가고 싶으면 그 정도 위험은 감수해야하지 않겠어? 나가도 위험한 건 마찬가지야. 만약 여기에 문이 있으면 어쩔거야?"
+    s "둘 다 일단 진정해."
+    show j lonely:
+        xzoom -1
+    j "진정할 수가 없어. 죽을 뻔했다니까 S? 여기는 너무 불안정해. 나가야 해."
+    a "이곳에 분명 나가는 문이 있어. 앞으론 조금 더 조심하면서 다니면 돼."
+    j "T, 어떻게 생각해요?"
+    t "저도 여기에 더 이상 머물 용기가 안나요. 우리 일단 나가보는게.."
+    a "S, 너도 나가고 싶어?"
+    s surprise "나?"
+
+    "어쩌지..?"
+    "A.. 아무래도 아내를 꼭 만나고 싶어하는 눈치인데.. 아무도 못 만나고 그냥 나가버리는 건 너무..."
+
+    if a_talk_c == True :
+        "어쩌면 아이도 만날 수 있을 텐데.."
+        "말을 하지는 않았지만... 아이도 정말 만나고 싶을 거야..."
+    "A가 이곳에 몇 번 와봤다니까 A 말대로 여기서 단서를 찾는 게 맞는 것일 수도 있고.."
+    "하지만 너무 위험해 보이긴 하는데.. 구멍에 빠지면 끝인 거잖아.. 어쩌지..."
+
+    jump a_room_2
