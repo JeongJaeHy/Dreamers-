@@ -10,6 +10,7 @@ init:
 label scene_2_start :
     #화면 검은색 + 멀리 보이는 얼음성 조그맣게.
     scene bg_ice_castle
+    show screen stats_button_screen
     "멀리 얼음성이 보인다."
 
     "멀리서 보아도 얼음성의 위용은 엄청났다. 하늘 끝까지 뻗은 뾰족한 얼음 첨탑과, 두꺼운 기둥들..."

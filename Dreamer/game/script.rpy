@@ -113,14 +113,14 @@ init:
 
 # 여기에서부터 게임이 시작합니다.
 label start:
-    #jump prologue
+    jump prologue
 
     #디버깅용 시작코드
-    jump a_room_1
+    #jump a_room_1
 
 
 label prologue:
-    show screen stats_button_screen
+
     play music "audio/Prologue.mp3" fadeout 1
 
     scene pro_1

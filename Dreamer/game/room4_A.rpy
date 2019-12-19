@@ -1036,7 +1036,7 @@ label a_room_end_evade:
         jump climax_start_bad_a
 
 label a_room_debug:
-    scene bg_vip2hole at dissolve
+    scene bg_vip2hole with dissolve
 
     show s talk at left with moveinleft
     s "J!!"

@@ -95,6 +95,7 @@ label scene_1_1 :
     jump scene_1_2
 
 label scene_1_2:
+    show screen stats_button_screen
     scene gift_background with dissolve
     show snj at center
     "깨어났을 때는 J가 걱정스럽게 나를 내려다보고 있었다."
